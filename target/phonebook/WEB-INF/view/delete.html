@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete person</title>
+</head>
+<body>
+
+<form action="/directory/{id}" th:method="POST">
+    Пожалуйста, введите мэйл и пароль:<br>
+    <input type="text" name="email" value="" placeholder="Ваш мэйл" required><br>
+
+    <input type="submit" value="Войти на сайт">
+</form>
+</body>
+</html>

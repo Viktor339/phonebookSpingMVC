@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Data</title>
+</head>
+<body>
+<p th:text="${person.getName()}">VALUE</p>
+<p th:text="${person.getSecondName()}">VALUE</p>
+<p th:text="${person.getPhoneNumber()}">VALUE</p>
+<p th:text="${person.getAddress()}">VALUE</p>
+
+
+<form th:action="@{/directory/{id}/edit(id=${person.getId()})}">
+    <input type="submit" value="Modify person data"/>
+</form>
+
+<form th:method="DELETE" th:action="@{/directory/{id}(id=${person.getId()})}">
+    <input type="submit" value="Delete person data"/>
+</form>
+</body>
+</html>
